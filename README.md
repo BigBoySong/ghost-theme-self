@@ -208,5 +208,3 @@ Starting from `Ghost` v3.x version, It provides a new bookmark card feature, it 
 ## License
 
 MIT © [xiaoluoboding](https://github.com/xiaoluoboding)
-# ghost-theme-self
-# ghost-theme-self
