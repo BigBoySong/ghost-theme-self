@@ -1,0 +1,18 @@
+
+{{#unless isSecondary}}
+	{{#foreach navigation}}
+		<li class="nav-item nav-{{slug}}{{#if current}} nav-current{{/if}}" role="presentation">
+			<a href="{{url absolute="true"}}">
+				<span class="nav_menuitem-name">
+					{{label}}
+				</span>
+			</a>
+		</li>
+	{{/foreach}}
+{{else}}
+  {{#foreach navigation}}
+	<li class="nav-item" ><a href="{{url absolute="true"}}">{{label}}</a></li>
+  {{/foreach}}
+{{/unless}}
+    
+

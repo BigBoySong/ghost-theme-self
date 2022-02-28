@@ -1,0 +1,35 @@
+{{!< default}}
+
+{{! This is a page template. A page outputs content just like any other post, and has all the same
+    attributes by default, but you can also customise it to behave differently if you prefer. }}
+
+{{! Everything inside the #post tags pulls data from the page }}
+{{#post}}
+
+{{> "header"}}
+<main id="container" class="container" role="main">
+<div id="content" class="bg container content col-sm-12 col-md-12 col-lg-12" style="background-color: #fff;">
+<div class="jumbotron" style="background:transparent;color: var(--primary-color);">
+<div class="" style="min-height:42vh;">
+  <h1>{{t 'Welcome message'}}</h1>
+  <p style="font-weight:blod">
+{{t "In the creation of your support"}}
+	 {{! count posts }}
+             {{#get "posts" as |posts postPages|}}
+                        {{! Use our pages (pagination) object }}
+                        
+                            {{plural postPages.total empty=(t "No posts") singular=(t "A collection of 1 post") plural=(t "A collection of % posts")}}
+                        
+                    {{/get}}
+
+	{{t "It is always suitable for you! If you have any questions you can email me"}}
+	
+</p>
+  <p><a class="btn btn-primary btn-lg" title="{{@custom.email_url}}" href="mailto:{{@custom.email_url}}" role="button" style="border-color:var(--primary-color);background:var(--primary-color);font-weight:blod">{{t "can email me"}}</a></p>
+</div>
+
+</div>
+</div>
+
+</main>
+{{/post}}
